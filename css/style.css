@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400|Bubblegum+Sans:400');
+:root {
+    /* Define Colors as colors */
+    --red: #ff5470;
+    --green: #98C383;
+    --yellow: #FFC633;
+    --lightYellow: #FFEE5B;
+    --mediumYellow: #FFDA47;
+    --brown: #805E3D;
+    --darkBrown: #6C4A29;
+    --lightBrown: #C2A665;
+    --black: #252D2E;
+    --white: #EBF3F9;
+    --grey: #757D7E;
+    --lightGrey: #EBF3F9;
+    /* Define Color Intensions */
+    --background: var(--lightGrey);
+    --textColor: var(--black);
+    /** Type **/
+    --headingFont: 'Bubblegum Sans', sans-serif;
+    --bodyFont: 'Lato', sans-serif;
+}
+
+/** Type Scale **/
+
+html {
+    font-size: 112.5%;
+}
+
+/*18px*/
+
+body {
+    font-family: var(--bodyFont);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+}
+
+h2 {
+    font-size: 2.441rem;
+}
+
+h3 {
+    font-size: 1.953rem;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+small, .text_small {
+    font-size: 0.8rem;
+}
+
+body {
+    background: var(--background);
+    color: var(--textColor)
+}
+
+.dark {
+    --background: var(--black);
+    --textColor: var(--lightGrey);
+}
