@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato:wght@100;300;400&display=swap');
+
+:root {
+   --primary:#FFDA47;
+   --secondary:var(--ssanyulove-300);
+    --ssanyuskin-400:#805E3D;
+    --ssanyuskin-500:#6C4A29;
+    --ssanyugray-100:#EBF3F9
+    --ssanyublack-400:#757D7E;
+    --ssanyulove-300:#98C383
+    --ssanyujoy-100:#FFEE5B;
+    --ssanyujoy-200:#FFDA47;
+    --ssanyujoy-300:#FFC633;
+    --ssanyuskin-500-rgba:108,74,41;
+    --black:#000;
+    --white:#fff; 
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(0deg, rgb(247,247,247) 23.8%,rgb(108,74,41) 92%);
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+
+h1 {
+	font-family: 'Bubblegum Sans', cursive;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+h2 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.container {
+    max-width:700px;
+    margin:auto
+}
+
+.logo > h1, h2 {
+    padding-bottom:0;
+    margin:0px;
+    line-height:0px
+}
+
+.logo {
+    text-align:center;
+    color:var(--white);
+    margin:auto 5px;
+    padding: 20px
+}
+
+.main-content {
+    padding:20px
+}
+
+.hero-image > img {
+    border-radius:8px;
+    width:100%
+}
+
+.info-card {
+    display:grid;
+    gap:5;
+    grid-template-columns:1fr 4fr auto;
+    margin:5px 0;
+    padding:5px;
+    background-color:yellow;
+    width:100%
+}
+
+.info-card > h3 {
+    font-size:1.8em
+}
+
+
+
