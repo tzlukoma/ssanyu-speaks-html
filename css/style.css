@@ -44,6 +44,7 @@ body {
 
 p {
     margin-bottom: 1rem;
+    max-width: 40em
 }
 
 p a {
@@ -99,4 +100,71 @@ body {
 .dark {
     --background: var(--black);
     --textColor: var(--lightGrey);
+}
+
+.container {
+    max-width: 50%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo {
+    max-width: 80%;
+    margin: auto
+}
+
+.logo img {
+    width: 100%
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-items: end;
+}
+
+.card-container {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 10
+}
+
+.image-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1
+}
+
+.cta {
+    margin-top: -55vh
+}
+
+.info-card {
+    display: flex;
+    max-width: 30vw;
+    margin-top: 3em;
+    padding: 5px;
+    color: var(--black)
+}
+
+.info-card h3 {
+    text-align: center;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: var(--h4);
+}
+
+.info-card.inspire {
+    transform: rotate(-5deg);
+    background-color: var(--lightYellow);
+}
+
+.info-card.bkr {
+    transform: rotate(4deg);
+    background-color: var(--mediumYellow);
+}
+
+.info-card.speaker {
+    transform: rotate(-3deg);
+    background-color: var(--yellow);
 }
