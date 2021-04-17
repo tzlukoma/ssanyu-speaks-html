@@ -10,15 +10,21 @@
     --darkBrown: #6C4A29;
     --lightBrown: #C2A665;
     --black: #252D2E;
-    --white: #EBF3F9;
+    --white: #FAF9F6;
     --grey: #757D7E;
     --lightGrey: #EBF3F9;
     /* Define Color Intensions */
-    --background: var(--lightGrey);
-    --textColor: var(--black);
+    --background: var(--brown);
+    --textColor: var(--white);
     /** Type **/
     --headingFont: 'Bubblegum Sans', sans-serif;
     --bodyFont: 'Lato', sans-serif;
+    --h1: 3.052em;
+    --h2: 2.441em;
+    --h3: 1.953em;
+    --h4: 1.563em;
+    --h5: 1.25em;
+    --smallText: 0.8em;
 }
 
 /** Type Scale **/
@@ -33,10 +39,17 @@ body {
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: 1.75;
+    padding-bottom: 300px
 }
 
 p {
     margin-bottom: 1rem;
+}
+
+p a {
+    color: var(--lightGrey);
+    text-decoration: none;
+    border-bottom: 1px solid var(--green);
 }
 
 h1, h2, h3, h4, h5 {
@@ -48,27 +61,34 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     margin-top: 0;
-    font-size: 3.052rem;
+    font-size: var(--h1);
 }
 
 h2 {
-    font-size: 2.441rem;
+    font-size: var(--h2);
 }
 
 h3 {
-    font-size: 1.953rem;
+    font-size: var(--h3);
 }
 
 h4 {
-    font-size: 1.563rem;
+    font-size: --h4;
 }
 
 h5 {
-    font-size: 1.25rem;
+    font-size: var(--h5);
 }
 
 small, .text_small {
-    font-size: 0.8rem;
+    font-size: var(--smallText);
+}
+
+blockquote {
+    border-left: solid 3px var(--lightBrown);
+    padding-left: 1em;
+    font-size: var(--smallText);
+    font-style: italic;
 }
 
 body {
