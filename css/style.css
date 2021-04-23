@@ -13,7 +13,7 @@
     --white: #FAF9F6;
     --grey: #757D7E;
     --lightGrey: #EBF3F9;
-    /* Define Color Intensions */
+    /* Define Color Intentions */
     --background: var(--brown);
     --textColor: var(--white);
     --lineColor: var(--lightBrown);
@@ -38,7 +38,7 @@
 /** Type Scale **/
 
 html {
-    font-size: 112.5%;
+    /* font-size: 112.5%; */
 }
 
 /*18px*/
@@ -47,7 +47,7 @@ body {
     font-family: var(--bodyFont);
     font-weight: 400;
     line-height: 1.75;
-    padding-bottom: 300px
+    padding-bottom: 4em;
 }
 
 p {
@@ -98,11 +98,6 @@ body {
     color: var(--textColor)
 }
 
-.dark {
-    --background: var(--black);
-    --textColor: var(--lightGrey);
-}
-
 blockquote {
     border-left: solid 3px var(--lightBrown);
     padding-left: 1em;
@@ -115,10 +110,16 @@ label {
     font-size: var(--h5);
 }
 
+form {
+    padding: 1em;
+    /* display: flex; */
+}
+
 input, textarea {
-    padding: 8px 12px;
+    padding: 1em 4em;
+    margin: 1em 2em;
     border: var(--line);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 input:focus, textarea:focus {
@@ -126,7 +127,8 @@ input:focus, textarea:focus {
 }
 
 ::placeholder {
-    color: var(--lightBrown)
+    color: var(--lightBrown);
+    padding: 1em;
 }
 
 button {
@@ -134,8 +136,9 @@ button {
     color: var(--black);
     background-color: var(--green);
     border: none;
-    border-radius: 10px;
-    padding: 5px 25px;
+    border-radius: 3px;
+    padding: 1em 5em;
+    margin: 1em 2em;
     box-shadow: var(--level-1);
     transition: 0.3s ease-in-out box-shadow;
 }
@@ -150,10 +153,20 @@ button[disabled] {
     background-color: var(--green);
 }
 
-.container {
-    max-width: 70%;
-    margin: auto;
-    padding-top: 20px;
+img {
+    width: 100%;
+    height: auto
+}
+
+.layout {
+    width: 80%;
+    max-width: 700px;
+    margin: 0.5rem auto;
+}
+
+.dark {
+    --background: var(--black);
+    --textColor: var(--lightGrey);
 }
 
 .logo {
@@ -161,24 +174,26 @@ button[disabled] {
     margin: auto
 }
 
-.logo img {
-    width: 100%
-}
-
 .hero {
+    --template-cols: 2fr 1fr 2fr;
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: var(--template-cols);
     justify-items: end;
+    height: 80vh
 }
 
 .card-container {
-    grid-column: 1 / span 2;
-    grid-row: 1;
+    --grid-col: 1 / span 2;
+    --grid-row: 1;
+    grid-column: var(--grid-col);
+    grid-row: var(--grid-row);
+    margin-bottom: 1em;
     z-index: 10
 }
 
 .image-container {
-    grid-column-start: 1;
+    --col-start: 1;
+    grid-column-start: var(--col-start);
     grid-column-end: 4;
     grid-row: 1;
 }
@@ -187,18 +202,18 @@ button[disabled] {
     box-shadow: var(--level-3);
 }
 
-/* .cta {
-    margin-top: -55vh
-} */
-
 .info-card {
+    --info-card-font: 1em;
+    --info-card-mr: 4em;
+    --info-card-ml: -8em;
     display: flex;
-    max-width: 30vw;
     margin-top: 3em;
-    margin-right: 2em;
+    margin-right: var(--info-card-mr);
+    margin-left: var(--info-card-ml);
     padding: 5px;
     color: var(--black);
     box-shadow: var(--level-3);
+    font-size: var(--info-card-font);
 }
 
 .info-card-heading {
@@ -207,7 +222,7 @@ button[disabled] {
 
 .info-card-content {
     border-left: var(--line);
-    padding: 1rem;
+    padding: 1em;
 }
 
 .info-card-heading h3 {
@@ -236,3 +251,72 @@ button[disabled] {
     transform: rotate(-3.06deg);
     background-color: var(--yellow);
 }
+
+.cta {
+    --cta-font: 1em;
+    display: flex;
+    font-size: var(--cta-font);
+    z-index: 20;
+}
+
+.subscribe {
+    text-align: center;
+}
+
+.subscribe h3 {
+    font-size: var(--h4)
+}
+
+.subscribe form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: var(--h2)
+    }
+    .hero {
+        --template-cols: 1fr;
+        margin-bottom: 2em;
+        height: auto;
+    }
+    .card-container {
+        --grid-row: 2;
+    }
+    .info-card {
+        --info-card-font: 0.9em;
+        --info-card-mr: 0;
+        --info-card-ml: 0;
+    }
+    .hero-image {
+        height: 30vh;
+        margin: 1em 0 0;
+    }
+    .hero-image img {
+        height: 100%;
+        object-fit: none;
+        object-position: 85% 8%;
+    }
+    .cta {
+        text-align: center;
+        display: block;
+        z-index: 20;
+    }
+    .cta button {
+        padding: 1em 3em;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {}
