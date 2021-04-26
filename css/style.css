@@ -38,7 +38,7 @@
 /** Type Scale **/
 
 html {
-    /* font-size: 112.5%; */
+    font-size: 112.5%;
 }
 
 /*18px*/
@@ -70,19 +70,20 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     margin-top: 0;
-    font-size: var(--h2);
+    font-size: var(--h3);
+    text-align: center;
 }
 
 h2 {
-    font-size: var(--h2);
+    font-size: var(--h4);
 }
 
 h3 {
-    font-size: var(--h3);
+    font-size: var(--h5);
 }
 
 h4 {
-    font-size: --h4;
+    font-size: --h5;
 }
 
 h5 {
@@ -116,10 +117,10 @@ form {
 }
 
 input, textarea {
-    padding: 1em 5em;
+    padding: 1em 4em;
     margin: 1em 2em;
     border: var(--line);
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 input[type="text"] {
@@ -137,12 +138,12 @@ input:focus, textarea:focus {
 }
 
 button {
-    --button-font: 1.1rem;
+    --button-font: 1rem;
     appearance: none;
     color: var(--black);
     background-color: var(--green);
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 1em 5em;
     margin: 1em 2em;
     font-size: var(--button-font);
@@ -216,6 +217,7 @@ img {
 }
 
 .image-container img {
+    border-radius: 5px;
     box-shadow: var(--level-3);
 }
 
@@ -228,6 +230,7 @@ img {
     margin-right: var(--info-card-mr);
     margin-left: var(--info-card-ml);
     padding: 5px;
+    border-radius: 5px;
     color: var(--black);
     box-shadow: var(--level-3);
     font-size: var(--info-card-font);
@@ -242,7 +245,7 @@ img {
     padding: 1em;
 }
 
-.info-card-heading h3 {
+.info-card-heading h2 {
     text-align: center;
     margin: auto 5px;
     padding: 2rem 20px;
@@ -275,10 +278,9 @@ img {
 }
 
 .cta {
-    /* --cta-font: 1rem; */
     display: block;
     text-align: center;
-    /* font-size: var(--cta-font); */
+    border-radius: 5px;
     z-index: 20;
 }
 
@@ -328,7 +330,7 @@ img {
 @media (min-width: 991.98px) {
     .hero {
         --template-cols: 2fr 1fr 2fr;
-        margin-bottom: -20em;
+        margin-bottom: -14em;
     }
     .hero-image-mobile {
         display: none;
@@ -342,14 +344,15 @@ img {
     }
     .cta {
         position: absolute;
-        padding: 2em;
+        padding: 1.5em;
         background-color: rgb(15, 18, 18, 0.3);
         z-index: 30;
     }
     .subscribe {
         position: absolute;
         z-index: 30;
-        margin-top: 8em;
+        margin-top: 6em;
+        padding-right: 3em;
         padding-bottom: 5em;
     }
     .subscribe form {
@@ -364,6 +367,7 @@ img {
     }
     .subscribe button {
         margin: 0 1em;
+        padding: 1em 4.5em;
     }
 }
 
