@@ -116,10 +116,15 @@ form {
 }
 
 input, textarea {
-    padding: 1em 4em;
+    padding: 1em 5em;
     margin: 1em 2em;
     border: var(--line);
     border-radius: 3px;
+}
+
+input[type="text"] {
+    --input-font: 1.1rem;
+    font-size: var(--input-font);
 }
 
 input:focus, textarea:focus {
@@ -132,6 +137,7 @@ input:focus, textarea:focus {
 }
 
 button {
+    --button-font: 1.1rem;
     appearance: none;
     color: var(--black);
     background-color: var(--green);
@@ -139,6 +145,7 @@ button {
     border-radius: 3px;
     padding: 1em 5em;
     margin: 1em 2em;
+    font-size: var(--button-font);
     box-shadow: var(--level-1);
     transition: 0.3s ease-in-out box-shadow;
 }
@@ -262,6 +269,11 @@ img {
     background-color: var(--yellow);
 }
 
+.info-card.bkr:hover, .info-card.inspire:hover, .info-card.speaker:hover {
+    color: var(--white);
+    background-color: var(--black)
+}
+
 .cta {
     /* --cta-font: 1rem; */
     display: block;
@@ -279,7 +291,8 @@ img {
 }
 
 .subscribe h3 {
-    font-size: var(--h4)
+    font-size: var(--h4);
+    margin-top: 1.25em
 }
 
 .subscribe form {
@@ -288,12 +301,9 @@ img {
     padding: 0;
 }
 
-/* Small devices (landscape phones, less than 768px), smaller tablets */
+/* Small devices - greater than 576px */
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-    button {
-        font-size: 1.25rem
-    }
+@media (min-width: 575.98px) {
     .cta {
         display: flex;
         justify-content: center;
@@ -302,15 +312,61 @@ img {
         padding: 1em 2em;
         margin: 0 0.5em;
     }
-    .subscribe form {
-        display: block;
-    }
 }
 
 /* Medium devices (tablets, less than 992px) */
 
-@media (max-width: 991.98px) {}
+@media (min-width: 767.98px) {
+    button {
+        --button-font: 1.25rem;
+        --input-font: 1.25rem;
+    }
+}
 
 /* Large devices (desktops, less than 1200px) */
 
-@media (max-width: 1199.98px) {}
+@media (min-width: 991.98px) {
+    .hero {
+        --template-cols: 2fr 1fr 2fr;
+        margin-bottom: -20em;
+    }
+    .hero-image-mobile {
+        display: none;
+    }
+    .hero-image-large {
+        display: inline-block;
+        position: relative;
+    }
+    .card-container {
+        --grid-row: 1
+    }
+    .cta {
+        position: absolute;
+        padding: 2em;
+        background-color: rgb(15, 18, 18, 0.3);
+        z-index: 30;
+    }
+    .subscribe {
+        position: absolute;
+        z-index: 30;
+        margin-top: 8em;
+        padding-bottom: 5em;
+    }
+    .subscribe form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .subscribe h3 {
+        text-align: left;
+    }
+    .subscribe input, textarea {
+        margin: 0
+    }
+    .subscribe button {
+        margin: 0 1em;
+    }
+}
+
+/** X-Large desktops **/
+
+@media (min-width: 1199.98px) {}
