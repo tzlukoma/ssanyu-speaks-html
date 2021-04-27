@@ -50,7 +50,6 @@ h2 {
 .logo > h1, h2 {
     padding-bottom:0;
     margin:0px;
-    line-height:0px
 }
 
 .logo {
@@ -71,7 +70,6 @@ h2 {
 
 .info-card {
     display:grid;
-    gap:5;
     grid-template-columns:1fr 4fr auto;
     margin:5px 0;
     padding:5px;
@@ -81,6 +79,14 @@ h2 {
 
 .info-card > h3 {
     font-size:1.8em
+}
+
+.inspire {
+    position: absolute;
+    width: 30em;
+    top: 15em;
+    left: 25em;
+    transform: rotate(-10deg);
 }
 
 
