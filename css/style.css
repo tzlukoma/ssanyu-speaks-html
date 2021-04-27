@@ -48,6 +48,8 @@ body {
     font-weight: 400;
     line-height: 1.75;
     padding-bottom: 4em;
+    background: var(--background);
+    color: var(--textColor)
 }
 
 p {
@@ -92,11 +94,6 @@ h5 {
 
 small, .text_small {
     font-size: var(--smallText);
-}
-
-body {
-    background: var(--background);
-    color: var(--textColor)
 }
 
 blockquote {
@@ -168,6 +165,13 @@ button[disabled] {
 img {
     width: 100%;
     height: auto
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+    text-align: center;
 }
 
 .layout {
@@ -294,6 +298,7 @@ img {
 
 .subscribe {
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .subscribe h3 {
@@ -310,10 +315,6 @@ img {
 .response a {
     text-decoration: none;
     color: var(--yellow)
-}
-
-#mc_embed_signup div.mce_inline_error {
-    background-color: var(--darkBrown);
 }
 
 /* Small devices - greater than 576px */
@@ -341,6 +342,13 @@ img {
 /* Large devices (desktops, less than 1200px) */
 
 @media (min-width: 991.98px) {
+    footer {
+        position: absolute;
+        margin-top: 18em;
+        font-size: var(--h5);
+        text-align: center;
+        z-index: 50;
+    }
     .hero {
         --template-cols: 2fr 1fr 2fr;
         margin-bottom: -14em;
