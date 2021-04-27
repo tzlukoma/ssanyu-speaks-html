@@ -117,8 +117,8 @@ form {
 }
 
 input, textarea {
-    padding: 1em 4em;
-    margin: 1em 2em;
+    padding: 1em 3em;
+    /* margin: 1em 2em; */
     border: var(--line);
     border-radius: 5px;
 }
@@ -132,19 +132,23 @@ input:focus, textarea:focus {
     outline: 2px solid var(--green)
 }
 
+input[type="button"]:focus: {
+    outline: 0
+}
+
 ::placeholder {
     color: var(--lightBrown);
     text-align: center
 }
 
-button {
+button, .button {
     --button-font: 1rem;
     appearance: none;
     color: var(--black);
     background-color: var(--green);
     border: none;
     border-radius: 5px;
-    padding: 1em 5em;
+    padding: 1em 4em;
     margin: 1em 2em;
     font-size: var(--button-font);
     box-shadow: var(--level-1);
@@ -303,6 +307,15 @@ img {
     padding: 0;
 }
 
+.response a {
+    text-decoration: none;
+    color: var(--yellow)
+}
+
+#mc_embed_signup div.mce_inline_error {
+    background-color: var(--darkBrown);
+}
+
 /* Small devices - greater than 576px */
 
 @media (min-width: 575.98px) {
@@ -355,15 +368,11 @@ img {
         padding-right: 3em;
         padding-bottom: 5em;
     }
-    .subscribe form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
     .subscribe h3 {
         text-align: left;
     }
     .subscribe input, textarea {
-        margin: 0
+        margin: 0 0 1.5em;
     }
     .subscribe button {
         margin: 0 1em;
