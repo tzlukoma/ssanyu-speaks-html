@@ -91,9 +91,18 @@
       <section>
         <div class="cta">
           <div class="shedule">
-            <button>Schedule a Consultation</button>
+            <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/llukoma/ssanyu-speaks-consultation'});return false;"><button>Schedule
+                a Consultation</button> </a>
+            </button>
+
+            <!-- Calendly link widget end -->
           </div>
           <div class="pre-book">
+            <!-- TODO: Add Ssanyu's Calendly link -->
             <button>Pre-Book an Event</button>
           </div>
         </div>
