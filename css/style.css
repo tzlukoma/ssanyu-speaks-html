@@ -332,7 +332,7 @@ img {
 /* Medium devices (tablets, less than 992px) */
 
 @media (min-width: 767.98px) {
-    button {
+    button, .button {
         --button-font: 1.25rem;
         --input-font: 1.25rem;
     }
