@@ -129,10 +129,6 @@ input:focus, textarea:focus {
     outline: 2px solid var(--green)
 }
 
-input[type="button"]:focus: {
-    outline: 0
-}
-
 ::placeholder {
     color: var(--lightBrown);
     text-align: center
@@ -152,12 +148,16 @@ button, .button {
     transition: 0.3s ease-in-out box-shadow;
 }
 
-button:hover {
+button:focus, .button:focus {
+    outline: 0
+}
+
+button:hover, .button:hover {
     background-color: var(--yellow);
     box-shadow: var(--level-2);
 }
 
-button[disabled] {
+button[disabled], .button:disabled {
     opacity: 0.6;
     background-color: var(--green);
 }
@@ -381,10 +381,6 @@ footer {
     }
     .subscribe input, textarea {
         margin: 0 0 1.5em;
-    }
-    .subscribe button {
-        margin: 0 1em;
-        padding: 1em 4.5em;
     }
 }
 
