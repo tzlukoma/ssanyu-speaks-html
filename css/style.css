@@ -2,19 +2,20 @@
 :root {
     /* Define Colors as colors */
     --red: #ff5470;
-    --green: #98C383;
-    --yellow: #FFC633;
-    --lightYellow: #FFEE5B;
-    --mediumYellow: #FFDA47;
+    --green: #abd1c6;
+    --yellow: #f9bc60;
+    --lightYellow: #f9bc60;
+    --mediumYellow: #f9bc60;
+    --happyHueBrown: #55423d;
     --brown: #805E3D;
     --darkBrown: #6C4A29;
     --lightBrown: #C2A665;
-    --black: #252D2E;
+    --black: #272343;
     --white: #FAF9F6;
     --grey: #757D7E;
     --lightGrey: #EBF3F9;
     /* Define Color Intentions */
-    --background: var(--brown);
+    --background: var(--happyHueBrown);
     --textColor: var(--white);
     --lineColor: var(--lightBrown);
     /* Styles */
