@@ -319,8 +319,18 @@ footer {
     margin-bottom: 1em;
 }
 
-.bio-content {
+.bio-content, .book-content {
     width: 100%;
+}
+
+.book-content {
+    margin: 0.5em 0em;
+}
+
+.book-subtitle {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1.10rem;
 }
 
 .cta {
@@ -390,6 +400,9 @@ footer {
     footer.bio-footer {
         margin-top: 12em;
     }
+    footer.book-footer {
+        margin-top: 2em;
+    }
     .hero {
         --template-cols: 2fr 1fr 2fr;
         margin-bottom: -14em;
@@ -397,6 +410,10 @@ footer {
     .hero.bio-hero {
         --template-cols: 2fr 3fr;
         margin-bottom: -14em;
+    }
+    .hero.book-hero {
+        --template-cols: 1fr;
+        margin-bottom: 0;
     }
     .hero-image-mobile, .bio-image-mobile {
         display: none;
