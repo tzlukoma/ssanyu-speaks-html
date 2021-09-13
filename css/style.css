@@ -97,6 +97,11 @@ small, .text_small {
     font-size: var(--smallText);
 }
 
+a {
+    text-decoration: underline;
+    color: var(--green)
+}
+
 blockquote {
     border-left: solid 3px var(--lightBrown);
     padding-left: 1em;
@@ -191,6 +196,30 @@ footer {
     margin: auto
 }
 
+.call-out {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--green)
+}
+
+.call-out-text {
+    line-height: normal;
+    margin: 0px 1rem 1rem;
+    width: 5rem;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.visited {
+    background-color: var(--yellow);
+    color: var(--brown);
+    border-radius: 5px;
+}
+
 .hero {
     --template-cols: 1fr;
     display: grid;
@@ -205,7 +234,7 @@ footer {
     height: auto;
 }
 
-.hero-image-large {
+.hero-image-large, .bio-image-large {
     display: none;
 }
 
@@ -286,6 +315,24 @@ footer {
     background-color: var(--black)
 }
 
+.bio-container {
+    margin-bottom: 1em;
+}
+
+.bio-content, .book-content {
+    width: 100%;
+}
+
+.book-content {
+    margin: 0.5em 0em;
+}
+
+.book-subtitle {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 1.10rem;
+}
+
 .cta {
     display: block;
     text-align: center;
@@ -318,6 +365,10 @@ footer {
     color: var(--yellow)
 }
 
+.buy-button {
+    margin: 0;
+}
+
 /* Small devices - greater than 576px */
 
 @media (min-width: 575.98px) {
@@ -343,23 +394,45 @@ footer {
 /* Large devices (desktops, less than 1200px) */
 
 @media (min-width: 991.98px) {
-    footer {
+    footer.home-footer, footer.bio-footer {
         position: absolute;
         margin-top: 18em;
         font-size: var(--h5);
         text-align: center;
         z-index: 50;
     }
+    footer.bio-footer {
+        margin-top: 12em;
+    }
+    footer.book-footer {
+        margin-top: 2em;
+        text-align: center;
+    }
     .hero {
         --template-cols: 2fr 1fr 2fr;
         margin-bottom: -14em;
     }
-    .hero-image-mobile {
+    .hero.bio-hero {
+        --template-cols: 2fr 3fr;
+        margin-bottom: -14em;
+    }
+    .hero.book-hero {
+        --template-cols: 1fr;
+        margin-bottom: 0;
+    }
+    .hero-image-mobile, .bio-image-mobile {
         display: none;
     }
     .hero-image-large {
         display: inline-block;
         position: relative;
+    }
+    .bio-image-large {
+        display: inline-block;
+        margin-top: 1.5em;
+    }
+    .bio-content {
+        width: 95%;
     }
     .card-container {
         --grid-row: 1
