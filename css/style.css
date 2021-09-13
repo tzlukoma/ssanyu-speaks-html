@@ -365,6 +365,10 @@ footer {
     color: var(--yellow)
 }
 
+.buy-button {
+    margin: 0;
+}
+
 /* Small devices - greater than 576px */
 
 @media (min-width: 575.98px) {
@@ -390,7 +394,7 @@ footer {
 /* Large devices (desktops, less than 1200px) */
 
 @media (min-width: 991.98px) {
-    footer {
+    footer.home-footer, footer.bio-footer {
         position: absolute;
         margin-top: 18em;
         font-size: var(--h5);
@@ -402,6 +406,7 @@ footer {
     }
     footer.book-footer {
         margin-top: 2em;
+        text-align: center;
     }
     .hero {
         --template-cols: 2fr 1fr 2fr;
