@@ -340,6 +340,34 @@ footer {
     font-size: 1.10rem;
 }
 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3em;
+}
+
+.product-item {
+    display: grid;
+    grid-template-rows: 3fr;
+    gap: 1em;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--lightGrey);
+    width: 90%;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.product-item, h3 {
+    font-size: 1.2rem;
+    margin: 1em 0;
+    color: var(--black)
+}
+
+.product-image {
+    border-radius: 5px;
+}
+
 .cta {
     display: block;
     text-align: center;
@@ -374,6 +402,10 @@ footer {
 
 .buy-button {
     margin: 0;
+}
+
+.buy-button:hover {
+    cursor: pointer;
 }
 
 /* Small devices - greater than 576px */
