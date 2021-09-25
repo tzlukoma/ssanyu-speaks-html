@@ -358,7 +358,7 @@ footer {
     border-radius: 10px;
 }
 
-.product-item, h3 {
+.product-item>h3 {
     font-size: 1.2rem;
     margin: 1em 0;
     color: var(--black)
