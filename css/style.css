@@ -227,6 +227,56 @@ footer {
     border-radius: 5px;
 }
 
+.promo-banner {
+    --template-cols: 1fr;
+    display: grid;
+    grid-template-columns: var(--template-cols);
+    transform: rotate(-5deg);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2em;
+    /* padding-bottom: 1em; */
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--black);
+    border-radius: 10px;
+    box-shadow: var(--level-3);
+}
+
+.promo-banner>img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.promo-banner>h2 {
+    margin: 0.5em;
+}
+
+.promo-banner:hover {
+    animation: grow 3s ease-in-out;
+    -wwebkit-animation: grow 3s ease-in-out;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    50% {
+        transform: scale(1.10);
+        -webkit-transform: scale(1.10);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1);
+    }
+}
+
+.promo-banner.a {
+    text-decoration: none;
+}
+
 .hero {
     --template-cols: 1fr;
     display: grid;
@@ -338,6 +388,16 @@ footer {
     margin: 0.5em;
     text-align: center;
     font-size: 1.10rem;
+}
+
+.shipping-notice>h2 {
+    margin-bottom: 0
+}
+
+.shipping-notice>h3 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    color: var(--green);
 }
 
 .product-grid {
