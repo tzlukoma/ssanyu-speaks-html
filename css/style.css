@@ -231,11 +231,9 @@ footer {
     --template-cols: 1fr;
     display: grid;
     grid-template-columns: var(--template-cols);
-    transform: rotate(-5deg);
     width: 80%;
     margin: auto;
     margin-bottom: 2em;
-    /* padding-bottom: 1em; */
     font-size: 0.8rem;
     text-align: center;
     text-decoration: none;
@@ -254,22 +252,19 @@ footer {
 }
 
 .promo-banner:hover {
-    animation: grow 3s ease-in-out;
-    -wwebkit-animation: grow 3s ease-in-out;
+    animation: enter 3s ease-in-out;
+    -webkit-animation: enter 3s ease-in-out;
 }
 
-@keyframes grow {
+@keyframes enter {
     0% {
-        transform: scale(1);
-        -webkit-transform: scale(1);
+        transform: rotate(0deg)
     }
     50% {
-        transform: scale(1.10);
-        -webkit-transform: scale(1.10);
+        transform: rotate(20deg)
     }
     100% {
-        transform: scale(1.0);
-        -webkit-transform: scale(1);
+        transform: rotate(0deg)
     }
 }
 
