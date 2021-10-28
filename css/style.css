@@ -272,6 +272,11 @@ footer {
     text-decoration: none;
 }
 
+.book-launch-button {
+    width: 80%;
+    margin: 2ch 4.5ch;
+}
+
 .hero {
     --template-cols: 1fr;
     display: grid;
